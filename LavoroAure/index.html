@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GrantSpider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       .hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+.icon-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+.icon-section div {
+    text-align: center;
+}
+.spider-logo {
+    width: 100px;
+    margin: 20px auto;
+}
+
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    text-align: center;
+}
+.feature-box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: #f9f9f9;
+} 
+
+.experts-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f1f1f1;
+}
+.expert {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+.expert img {
+    width: 100px;
+    border-radius: 50%;
+}
+.scroll-link {
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">GrantSpider</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link scroll-link" href="#contact">Get in Touch</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="text-primary">Building a complete web of grant opportunities</h1>
+        <p>GrantSpider è un'applicazione web che automatizza tutte le fasi di richiesta di finanziamenti per progetti europei e nazionali.</p>
+        <img src="spider-icon.png" alt="GrantSpider Logo" class="spider-logo">
+        <div class="icon-section">
+            <div>
+                <img src="dataset-icon.png" alt="Dataset" width="50">
+                <p>Enriched external datasets</p>
+            </div>
+            <div>
+                <img src="filters-icon.png" alt="Filters" width="50">
+                <p>Customer’s filters and documentation</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="feature-box">
+            <img src="grant-finder-icon.png" alt="Grant Finder" width="50">
+            <h4>Grant Finder</h4>
+            <p>Automated scan of grants matching your expertise, eligibility, and other criteria.</p>
+        </div>
+        <div class="feature-box">
+            <img src="consortium-builder-icon.png" alt="Consortium Builder" width="50">
+            <h4>Consortium Builder</h4>
+            <p>Automated profiling and search of ideal partners (or clients) for your projects.</p>
+        </div>
+        <div class="feature-box">
+            <img src="consortium-manager-icon.png" alt="Consortium Manager" width="50">
+            <h4>Consortium Manager</h4>
+            <p>Automated integration and management of partner documentation.</p>
+        </div>
+        <div class="feature-box">
+            <img src="proposal-drafter-icon.png" alt="Proposal Drafter" width="50">
+            <h4>Proposal Drafter</h4>
+            <p>Automated drafting and enrichment of information from multiple data sources.</p>
+        </div>
+    </section>
+
+    <section class="experts-section" id="contact">
+        <h2>Book a demo with our experts</h2>
+        <div class="expert">
+            <img src="aurelio-negr.jpg" alt="Aurelio Negri">
+            <h4>Aurelio Negri</h4>
+            <p>Head of Business Development</p>
+        </div>
+        <div class="expert">
+            <img src="matteo-spinaz.jpg" alt="Matteo Spinazzola">
+            <h4>Matteo Spinazzola</h4>
+            <p>Head of Product Development</p>
+        </div>
+        <br>
+        <button class="btn btn-primary scroll-link" href="#">Get in Touch</button>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== "#") {
+                    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
